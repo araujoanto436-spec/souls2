@@ -6,9 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Souls Menu</title>
 </head>
-<body style="display: none;">
-
-    <div id="notification-container"></div>
+<body> <div id="notification-container"></div>
 
     <div class="app-container" id="menu-container">
         
@@ -193,7 +191,6 @@
             </div>
 
             <div id="view-armas" class="view-container" style="display: none;">
-                
                 <header class="top-nav" style="margin-bottom: 10px; flex-shrink: 0;">
                     <div class="top-nav-item active" data-target="content-armas">
                         <img src="./armas.png" class="custom-icon top-icon" alt="Pistola"> Armas
@@ -202,202 +199,27 @@
                         <img src="./escudo.png" class="custom-icon top-icon" alt="Escudo"> Equipamentos
                     </div>
                 </header>
-                
                 <div style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
-                    
                     <div id="content-armas" class="tab-content active-tab" style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
                         <div class="search-container">
                             <label>Pesquisar arma</label>
                             <input type="text" id="search-weapon" placeholder="Digite aqui..." onkeyup="pesquisarArma()">
                         </div>
-
                         <div class="weapon-container" id="weapon-list">
-                            <div class="weapon-card bindable" data-bind="wpn_knife" onclick="spawnWeapon('WEAPON_KNIFE')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_knife.png" alt="faca">
-                                <span>faca</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_bat" onclick="spawnWeapon('WEAPON_BAT')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_bat.png" alt="taco">
-                                <span>taco</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_switchblade" onclick="spawnWeapon('WEAPON_SWITCHBLADE')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_switchblade.png" alt="canivete">
-                                <span>canivete</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_machete" onclick="spawnWeapon('WEAPON_MACHETE')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_machete.png" alt="machete">
-                                <span>machete</span>
-                            </div>
                             <div class="weapon-card bindable" data-bind="wpn_pistol" onclick="spawnWeapon('WEAPON_PISTOL')">
                                 <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_pistol.png" alt="pistola">
                                 <span>pistola</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_combatpistol" onclick="spawnWeapon('WEAPON_COMBATPISTOL')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_combatpistol.png" alt="pistola combate">
-                                <span>pistola combat</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_pistolmk2" onclick="spawnWeapon('WEAPON_PISTOL_MK2')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_pistol_mk2.png" alt="pistola mk2">
-                                <span>pistola mk2</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_appistol" onclick="spawnWeapon('WEAPON_APPISTOL')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_appistol.png" alt="ap pistol">
-                                <span>ap pistol</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_revolver" onclick="spawnWeapon('WEAPON_REVOLVER')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_revolver.png" alt="revolver">
-                                <span>revolver</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_smg" onclick="spawnWeapon('WEAPON_SMG')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_smg.png" alt="smg">
-                                <span>smg</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_microsmg" onclick="spawnWeapon('WEAPON_MICROSMG')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_microsmg.png" alt="uzi">
-                                <span>uzi (micro smg)</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_combatpdw" onclick="spawnWeapon('WEAPON_COMBATPDW')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_combatpdw.png" alt="combat pdw">
-                                <span>combat pdw</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_machinepistol" onclick="spawnWeapon('WEAPON_MACHINEPISTOL')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_machinepistol.png" alt="tecpistol">
-                                <span>tec-9</span>
                             </div>
                             <div class="weapon-card bindable" data-bind="wpn_assault" onclick="spawnWeapon('WEAPON_ASSAULTRIFLE')">
                                 <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_assaultrifle.png" alt="ak47">
                                 <span>ak47</span>
                             </div>
-                            <div class="weapon-card bindable" data-bind="wpn_carbine" onclick="spawnWeapon('WEAPON_CARBINERIFLE')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_carbinerifle.png" alt="m4">
-                                <span>m4 (carbine)</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_g36" onclick="spawnWeapon('WEAPON_SPECIALCARBINE')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_specialcarbine.png" alt="fuzil g36">
-                                <span>fuzil g36</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_bullpup" onclick="spawnWeapon('WEAPON_BULLPUPRIFLE')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_bullpuprifle.png" alt="bullpup">
-                                <span>bullpup</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_pump" onclick="spawnWeapon('WEAPON_PUMPSHOTGUN')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_pumpshotgun.png" alt="escopeta">
-                                <span>escopeta</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_sawn" onclick="spawnWeapon('WEAPON_SAWNOFFSHOTGUN')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_sawnoffshotgun.png" alt="doze">
-                                <span>doze cortada</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_assaultshot" onclick="spawnWeapon('WEAPON_ASSAULTSHOTGUN')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_assaultshotgun.png" alt="shotgun auto">
-                                <span>shotgun auto</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_sniper" onclick="spawnWeapon('WEAPON_SNIPERRIFLE')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_sniperrifle.png" alt="sniper">
-                                <span>sniper</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_heavysniper" onclick="spawnWeapon('WEAPON_HEAVYSNIPER')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_heavysniper.png" alt="sniper barret">
-                                <span>sniper pesada</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_rpg" onclick="spawnWeapon('WEAPON_RPG')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_rpg.png" alt="rpg">
-                                <span>rpg (bazuca)</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_minigun" onclick="spawnWeapon('WEAPON_MINIGUN')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_minigun.png" alt="minigun">
-                                <span>minigun</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_grenade" onclick="spawnWeapon('WEAPON_GRENADE')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_grenade.png" alt="granada">
-                                <span>granada</span>
-                            </div>
-                            <div class="weapon-card bindable" data-bind="wpn_sticky" onclick="spawnWeapon('WEAPON_STICKYBOMB')">
-                                <img src="https://raw.githubusercontent.com/qbcore-framework/qb-inventory/main/html/images/weapon_stickybomb.png" alt="c4">
-                                <span>c4 (sticky)</span>
-                            </div>
-                        </div>
-
-                        <div class="bottom-actions" style="flex-shrink: 0; margin-top: 10px;">
-                            <div class="action-btn bindable" data-bind="spawn_all_wpns" style="margin-bottom: 10px;" onclick="sendClick('spawn_all_weapons')">Spawnar Todas As Armas <span class="bind-text"></span></div>
-                            <div class="action-btn bindable" data-bind="remove_all_wpns" onclick="sendClick('remove_all_weapons')">Remover Todas as Armas <span class="bind-text"></span></div>
-                        </div>
-                    </div>
-
-                    <div id="content-equip" class="tab-content" style="display: none; flex-direction: column; flex: 1; overflow: hidden; padding-top: 5px;">
-                        <div class="grid-container">
-                            
-                            <div class="column">
-                                <div class="panel-title">
-                                    <img src="./raio.png" class="custom-icon panel-icon" alt="Funções"> Funções
-                                </div>
-                                <div class="panel-box">
-                                    <div class="toggle-item bindable" data-bind="inf_ammo">
-                                        <span>Munição Infinita <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('infinite_ammo', this.checked)">
-                                    </div>
-                                    <div class="slider-container" style="margin-top: 15px;">
-                                        <div class="slider-label"><span>Quantidade de Munição</span><span id="val-ammo">1</span></div>
-                                        <input type="range" min="1" max="300" value="1" class="souls-slider" oninput="updateSlider('val-ammo', this.value); sendSlider('ammo_amount', this.value)">
-                                    </div>
-                                    <div class="action-btn bindable" style="margin-top: 10px;" onclick="sendClick('puxar_municao')">Puxar Munição <span class="bind-text"></span></div>
-                                </div>
-
-                                <div class="panel-title" style="margin-top: 15px;">
-                                    <img src="./escudo.png" class="custom-icon panel-icon" alt="Habilidades"> Habilidades
-                                </div>
-                                <div class="panel-box">
-                                    <div class="toggle-item bindable" data-bind="liberar_coro">
-                                        <span>Liberar Coronhadas <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('liberar_coronhada', this.checked)">
-                                    </div>
-                                    <div class="toggle-item bindable" data-bind="no_reload">
-                                        <span>No Reload <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('no_reload', this.checked)">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="column">
-                                <div class="panel-title">
-                                    <img src="./armas.png" class="custom-icon panel-icon" alt="Outros"> Outros
-                                </div>
-                                <div class="panel-box">
-                                    <div class="action-item bindable" data-bind="force_tab_on" onclick="sendClick('force_tab_on')" style="text-align: left; padding: 8px 0; border-bottom: 1px solid #1a1a24;">
-                                        Forçar Tab <span class="bind-text"></span>
-                                    </div>
-                                    <div class="action-item bindable" data-bind="force_tab_off" onclick="sendClick('force_tab_off')" style="text-align: left; padding: 8px 0; border-bottom: none;">
-                                        Desativar Tab <span class="bind-text"></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="panel-title" style="margin-top: 15px;">
-                                    <img src="./peds.png" class="custom-icon panel-icon" alt="Skins"> Skins
-                                </div>
-                                <div class="panel-box">
-                                    
-                                    <div class="slider-container" style="margin-bottom: 10px;">
-                                        <div class="slider-label"><span>Cor da Arma</span><span id="val-skin">1</span></div>
-                                        <input type="range" min="1" max="10" value="1" class="souls-slider" oninput="updateSlider('val-skin', this.value); sendSlider('skin_arma', this.value)">
-                                    </div>
-                                    <div class="action-btn bindable" style="margin-bottom: 15px;" onclick="sendClick('mudar_skin')">Mudar <span class="bind-text"></span></div>
-
-                                    <div class="toggle-item bindable" data-bind="arma_rgb">
-                                        <span>Arma RGB <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('arma_rgb', this.checked)">
-                                    </div>
-
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div id="view-veiculos" class="view-container" style="display: none;">
-                
                 <header class="top-nav" style="margin-bottom: 10px; flex-shrink: 0;">
                     <div class="top-nav-item active" data-target="tela-veiculos-carros">
                         <img src="./carro.png" class="custom-icon top-icon" alt="Carros"> Carros
@@ -406,276 +228,19 @@
                         <img src="./mala.png" class="custom-icon top-icon" alt="Spawn"> Spawn
                     </div>
                 </header>
-
-                <div style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
-                    
-                    <div id="tela-veiculos-carros" class="tab-content active-tab" style="display: flex; flex-direction: column; flex: 1; overflow: hidden; padding-top: 5px;">
-                        <div class="grid-container">
-                            
-                            <div class="column">
-                                <div class="panel-title">
-                                    <img src="./carro.png" class="custom-icon panel-icon" alt="Modificação"> Modificação
-                                </div>
-                                <div class="panel-box">
-                                    
-                                    <div class="action-btn bindable rounded-btn" data-bind="destrancar_veiculos" onclick="sendClick('destrancar_veiculos')" style="margin-bottom: 10px;">Destrancar Veículos <span class="bind-text"></span></div>
-                                    <div class="action-btn bindable rounded-btn" data-bind="trancar_veiculos" onclick="sendClick('trancar_veiculos')" style="margin-bottom: 10px;">Trancar Veículos <span class="bind-text"></span></div>
-                                    <div class="action-btn bindable rounded-btn" data-bind="tp_veiculo_prox" onclick="sendClick('tp_veiculo_prox')" style="margin-bottom: 10px;">Tp Veiculo Proximo <span class="bind-text"></span></div>
-
-                                    <div class="color-picker-container">
-                                        <span style="font-size: 13px; color: #888;">Cor Primária do Veículo</span>
-                                        <input type="color" class="color-picker-input" value="#e60000" oninput="sendColor('cor_primaria', this.value)">
-                                    </div>
-                                    
-                                    <div class="color-picker-container" style="border-bottom: none; margin-bottom: 10px;">
-                                        <span style="font-size: 13px; color: #888;">Cor Secundária do Veículo</span>
-                                        <input type="color" class="color-picker-input" value="#e60000" oninput="sendColor('cor_secundaria', this.value)">
-                                    </div>
-
-                                    <div class="toggle-item bindable" data-bind="auto_unlock" style="border-top: 1px solid #1a1a24; padding-top: 10px;">
-                                        <span>Destrancar Automático <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('auto_unlock', this.checked)">
-                                    </div>
-                                    
-                                    <div class="toggle-item bindable" data-bind="drop_rapido">
-                                        <span>Drop Rápido <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('drop_rapido', this.checked)">
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="column">
-                                <div class="panel-title">
-                                    <img src="./escudo.png" class="custom-icon panel-icon" alt="Auxílio"> Auxílio
-                                </div>
-                                <div class="panel-box" style="margin-bottom: 15px;">
-                                    <div class="action-btn bindable" onclick="sendClick('reparar_veiculo')" style="margin-bottom: 10px;">Reparar Veículo <span class="bind-text"></span></div>
-                                    <div class="action-btn bindable" onclick="sendClick('desvirar_carro')" style="margin-bottom: 10px;">Desvirar Carro <span class="bind-text"></span></div>
-                                    <div class="action-btn bindable" onclick="sendClick('tunar_full')" style="margin-bottom: 10px;">Tunar Full <span class="bind-text"></span></div>
-                                    <div class="action-btn bindable" onclick="sendClick('tunagem_aleatoria')" style="margin-bottom: 15px;">Tunagem Aleatória <span class="bind-text"></span></div>
-                                    
-                                    <div class="toggle-item bindable" data-bind="veiculo_rgb" style="justify-content: space-between; padding: 0 5px;">
-                                        <span style="color: #666; font-size: 12px; font-weight: 600;">Veículo RGB <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" id="chk-veiculo_rgb" onchange="sendToggle('veiculo_rgb', this.checked)">
-                                    </div>
-                                </div>
-
-                                <div class="panel-title">
-                                    <img src="./players.png" class="custom-icon panel-icon" alt="Movimentação"> Movimentação
-                                </div>
-                                <div class="panel-box">
-                                    <div class="toggle-item bindable" data-bind="super_handling">
-                                        <span>Super Handling <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('super_handling', this.checked)">
-                                    </div>
-                                    <div class="toggle-item bindable" data-bind="boost_buzina">
-                                        <span>Boost Buzina <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('boost_buzina', this.checked)">
-                                    </div>
-                                    <div class="toggle-item bindable" data-bind="super_freio">
-                                        <span>Super Freio <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('super_freio', this.checked)">
-                                    </div>
-                                    <div class="toggle-item bindable" data-bind="auto_reparar">
-                                        <span>Auto Reparar <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('auto_reparar', this.checked)">
-                                    </div>
-                                    <div class="toggle-item bindable" data-bind="godmode_veiculo">
-                                        <span>GodMode Veículo <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('godmode_veiculo', this.checked)">
-                                    </div>
-                                    <div class="toggle-item bindable" data-bind="pneu_blindado">
-                                        <span>Pneu Blindado <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('pneu_blindado', this.checked)">
-                                    </div>
-                                    <div class="toggle-item bindable" data-bind="remover_radio">
-                                        <span>Remover Rádio <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('remover_radio', this.checked)">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="tela-veiculos-spawn" class="tab-content" style="display: none; flex-direction: column; flex: 1; overflow: hidden; padding-top: 5px;">
-                        
-                        <div class="grid-container" style="flex: 1;">
-                            
-                            <div class="column">
-                                <div class="panel-title">
-                                    <img src="./carro.png" class="custom-icon panel-icon" alt="Carro"> Spawn Pronto
-                                </div>
-                                <div class="panel-box" style="margin-bottom: 15px;">
-                                    
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
-                                        <div class="action-btn bindable rounded-btn" data-bind="spawn_t20" onclick="spawnarVeiculoDireto('t20')" style="margin: 0;">T20 <span class="bind-text"></span></div>
-                                        <div class="action-btn bindable rounded-btn" data-bind="spawn_zentorno" onclick="spawnarVeiculoDireto('zentorno')" style="margin: 0;">Zentorno <span class="bind-text"></span></div>
-                                        <div class="action-btn bindable rounded-btn" data-bind="spawn_kuruma" onclick="spawnarVeiculoDireto('kuruma')" style="margin: 0;">Kuruma <span class="bind-text"></span></div>
-                                        <div class="action-btn bindable rounded-btn" data-bind="spawn_bati" onclick="spawnarVeiculoDireto('bati')" style="margin: 0;">Bati 801 <span class="bind-text"></span></div>
-                                        <div class="action-btn bindable rounded-btn" data-bind="spawn_bus" onclick="spawnarVeiculoDireto('bus')" style="margin: 0;">Ônibus <span class="bind-text"></span></div>
-                                        <div class="action-btn bindable rounded-btn" data-bind="spawn_cargobob" onclick="spawnarVeiculoDireto('cargobob')" style="margin: 0;">Cargobob <span class="bind-text"></span></div>
-                                        <div class="action-btn bindable rounded-btn" data-bind="spawn_police" onclick="spawnarVeiculoDireto('police')" style="grid-column: span 2; margin: 0;">Viatura Policial <span class="bind-text"></span></div>
-                                    </div>
-
-                                    <div class="toggle-item bindable" data-bind="spawn_in_veh_2" style="border-top: 1px solid #1a1a24; padding-top: 15px;">
-                                        <span style="padding-left: 5px;">Spawnar Dentro do Veículo <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" id="chk-spawn_in_veh_right" checked onchange="sendToggle('spawn_in_veh', this.checked); sincronizarCheckboxesSpawn(this.checked);">
-                                    </div>
-
-                                </div>
-
-                                <div class="panel-title" style="margin-top: 15px;">
-                                    <img src="./raio.png" class="custom-icon panel-icon" alt="Raio"> Spawn SantaGroup
-                                </div>
-                                <div class="panel-box" style="margin-bottom: 15px;">
-                                    
-                                    <div class="action-btn bindable rounded-btn" data-bind="spawn_caval_voa" onclick="spawnarVeiculoDireto('cavalcadesuperabs')" style="margin-bottom: 10px;">Cavalcade Voadora <span class="bind-text"></span></div>
-                                    <div class="action-btn bindable rounded-btn" data-bind="spawn_caval_limo" onclick="spawnarVeiculoDireto('cavalcadelimoabs')" style="margin-bottom: 10px;">Cavalcade Limo Voadora <span class="bind-text"></span></div>
-                                    <div class="action-btn bindable rounded-btn" data-bind="spawn_caval_blind" onclick="spawnarVeiculoDireto('cavalcadesuper')" style="margin-bottom: 15px;">Cavalcade FullBlindada <span class="bind-text"></span></div>
-
-                                    <div class="toggle-item bindable" data-bind="spawn_in_veh_3" style="border-top: 1px solid #1a1a24; padding-top: 15px;">
-                                        <span style="padding-left: 5px;">Spawnar Dentro do Veículo <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" id="chk-spawn_in_veh_santagroup" checked onchange="sendToggle('spawn_in_veh', this.checked); sincronizarCheckboxesSpawn(this.checked);">
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="column">
-                                <div class="panel-title">
-                                    <img src="./mala.png" class="custom-icon panel-icon" alt="Spawn"> Gerenciador de Spawn
-                                </div>
-                                <div class="panel-box" style="margin-bottom: 15px;">
-                                    
-                                    <div class="search-container" style="margin-bottom: 15px;">
-                                        <label style="padding-left: 5px;">Código do Veículo</label>
-                                        <input type="text" id="input-spawn-veiculo" class="rounded-input" placeholder="Ex: t20, adder, bmx...">
-                                    </div>
-
-                                    <div class="toggle-item bindable" data-bind="spawn_in_veh" style="margin-bottom: 15px; border-bottom: 1px solid #1a1a24; padding-bottom: 15px;">
-                                        <span style="padding-left: 5px;">Spawnar Dentro do Veículo <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" id="chk-spawn_in_veh_left" checked onchange="sendToggle('spawn_in_veh', this.checked); sincronizarCheckboxesSpawn(this.checked);">
-                                    </div>
-
-                                    <div style="display: flex; gap: 10px;">
-                                        <div class="action-btn bindable rounded-btn" data-bind="spawn_veiculo_btn" onclick="spawnarVeiculoCustom()" style="flex: 1; background-color: #e60000; color: white; border: none;">Adicionar <span class="bind-text"></span></div>
-                                        <div class="action-btn bindable rounded-btn" data-bind="del_veiculo_btn" onclick="sendClick('deletar_veiculo')" style="flex: 1; border-color: #e60000; color: #ff4d4d;">Deletar <span class="bind-text"></span></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
+                <div id="tela-veiculos-carros" class="tab-content active-tab">
+                    <div class="action-btn bindable rounded-btn" onclick="sendClick('reparar_veiculo')">Reparar Veículo</div>
                 </div>
             </div>
 
             <div id="view-online" class="view-container" style="display: none;">
-                
                 <header class="top-nav" style="margin-bottom: 10px; flex-shrink: 0;">
-                    <div class="top-nav-item" data-target="tela-online-jogadores">
+                    <div class="top-nav-item active" data-target="tela-online-jogadores">
                         <img src="./jogador.png" class="custom-icon top-icon" alt="Jogadores"> Jogadores
                     </div>
-                    <div class="top-nav-item active" data-target="tela-online-carros">
-                        <img src="./carro.png" class="custom-icon top-icon" alt="Carros"> Carros
-                    </div>
                 </header>
-
-                <div style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
-                    
-                    <div id="tela-online-jogadores" class="tab-content" style="display: none; flex-direction: column; flex: 1; overflow: hidden; padding-top: 5px;">
-                        <div class="grid-container">
-                            <div class="column" style="display: flex; flex-direction: column;">
-                                <div class="panel-title">
-                                    <img src="./players.png" class="custom-icon panel-icon" alt="Lista"> Lista de Players
-                                </div>
-                                <div class="panel-box" style="margin-bottom: 15px; flex: 1; display: flex; flex-direction: column;">
-                                    <div class="search-container" style="margin-bottom: 15px;">
-                                        <label style="padding-left: 5px;">Pesquisar Player</label>
-                                        <input type="text" id="search-player" class="rounded-input" placeholder="Digite aqui..." onkeyup="renderOnlinePlayers()">
-                                    </div>
-                                    
-                                    <div id="online-player-list" style="background-color: transparent; flex: 1; min-height: 150px; overflow-y: auto; border-top: 1px solid #1a1a24; padding-top: 10px;">
-                                        <div style="color: #555; text-align: center; padding: 20px 0; font-size: 12px;">Carregando jogadores...</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="panel-title">
-                                    <img src="./escudo.png" class="custom-icon panel-icon" alt="Sec"> Secundárias / Opções
-                                </div>
-                                <div class="panel-box">
-                                    <div class="toggle-item bindable" data-bind="espectar_jogador" style="padding: 0 5px 10px 5px; border-bottom: none;">
-                                        <span style="font-weight: 600; color: #888;">Espectar Jogador <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('espectar_jogador', this.checked, this)">
-                                    </div>
-                                    <div class="toggle-item bindable" data-bind="molestar_jogador" style="padding: 10px 5px 0 5px; border-top: 1px solid #1a1a24;">
-                                        <span style="font-weight: 600; color: #888;">Molestar Jogador <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('molestar_jogador', this.checked, this)">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column" id="coluna-direita-jogadores">
-                                <div style="color: #555; text-align: center; font-size: 13px; margin-top: 20px;">
-                                    [Mais funções para jogadores virão aqui]
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="tela-online-carros" class="tab-content active-tab" style="display: flex; flex-direction: column; flex: 1; overflow: hidden; padding-top: 5px;">
-                        <div class="grid-container">
-                            
-                            <div class="column" style="display: flex; flex-direction: column;">
-                                <div class="panel-title">
-                                    <img src="./carro.png" class="custom-icon panel-icon" alt="Carro"> Lista de Veículos
-                                </div>
-                                <div class="panel-box" style="margin-bottom: 15px; flex: 1; display: flex; flex-direction: column;">
-                                    <div class="search-container" style="margin-bottom: 15px;">
-                                        <label style="padding-left: 5px;">Pesquisar Carro</label>
-                                        <input type="text" id="search-online-car" class="rounded-input" placeholder="Digite aqui..." onkeyup="renderOnlineVehicles()">
-                                    </div>
-                                    
-                                    <div id="online-vehicle-list" style="background-color: transparent; flex: 1; min-height: 150px; overflow-y: auto; border-top: 1px solid #1a1a24; padding-top: 10px;">
-                                        <div style="color: #555; text-align: center; padding: 20px 0; font-size: 12px;">Carregando veículos...</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="panel-title">
-                                    <img src="./carro.png" class="custom-icon panel-icon" alt="Carro"> Opções do Seu Carro
-                                </div>
-                                <div class="panel-box">
-                                    <div class="toggle-item bindable" style="padding: 0 5px; border-bottom: none;">
-                                        <span style="font-weight: 600; color: #888;">Espectar Veículo <span class="bind-text"></span></span>
-                                        <input type="checkbox" class="souls-checkbox" onchange="sendToggle('espectar_veiculo', this.checked, this)"> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="column">
-                                <div class="panel-title">
-                                    <img src="./escudo.png" class="custom-icon panel-icon" alt="Opções"> Opções com Veículo
-                                </div>
-                                <div class="panel-box" style="margin-bottom: 15px;">
-                                    <div class="action-btn bindable rounded-btn" onclick="sendClick('puxar_veiculo')">Puxar Veículo</div>
-                                    <div class="action-btn bindable rounded-btn" onclick="sendClick('deletar_veiculo_selecionado')">Deletar Veículo</div>
-                                    <div class="action-btn bindable rounded-btn" onclick="sendClick('puxar_todos_veiculos')" style="margin-bottom: 0;">Puxar Todos Veículos</div>
-                                </div>
-
-                                <div class="panel-title">
-                                    <img src="./raio.png" class="custom-icon panel-icon" alt="Trolls"> Trolls Passageiro
-                                </div>
-                                <div class="panel-box">
-                                    <div class="action-btn bindable rounded-btn" onclick="sendClick('matar_passageiros')">Matar Passageiros</div>
-                                    <div class="action-btn bindable rounded-btn" onclick="sendClick('jogar_veiculo_oceano')">Jogar Veículo No Oceano</div>
-                                    <div class="action-btn bindable rounded-btn" onclick="sendClick('jogar_veiculo_espaco')">Jogar Veículo No Espaço</div>
-                                    <div class="action-btn bindable rounded-btn" onclick="sendClick('deixar_passageiros_ceu')" style="margin-bottom: 0;">Deixar Passageiros No Céu</div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
+                <div id="tela-online-jogadores" class="tab-content active-tab">
+                     <div id="online-player-list">Carregando jogadores...</div>
                 </div>
             </div>
 
@@ -683,377 +248,54 @@
     </div>
 
     <script>
-        let tempoAbertura = 0;
-        
-        let onlineVehicles = [];
-        let selectedOnlineVehicle = null;
-        
-        let onlinePlayers = [];
-        let selectedOnlinePlayer = null;
-
-        const nameMap = {
-            'godmode': 'God Mode', 'autoReviver': 'Auto Reviver', 'anti_hs': 'Anti-HeadShot',
-            'noclip_normal': 'Noclip Normal', 'noclip_invis': 'Noclip Invisível', 'freecam': 'Freecam',
-            'autoTpway': 'Auto Tpway', 'block_h': 'Bloquear H', 'block_tptome': 'Bloquear Tptome',
-            'block_tpto': 'Bloquear Tpto', 'block_algemas': 'Bloquear Algemas', 'fastSprint': 'Corrida Rápida',
-            'super_pulo': 'Super Pulo', 'infStamina': 'Stamina Infinita', 'nao_cair_moto': 'Não Cair da Moto',
-            'infinite_ammo': 'Munição Infinita', 'liberar_coronhada': 'Liberar Coronhadas', 'no_reload': 'No Reload',
-            'arma_rgb': 'Arma RGB', 'veiculo_rgb': 'Veículo RGB', 'spawn_in_veh': 'Spawnar Dentro do Veículo',
-            
-            'super_handling': 'Super Handling', 'boost_buzina': 'Boost Buzina', 'super_freio': 'Super Freio',
-            'auto_reparar': 'Auto Reparar', 'godmode_veiculo': 'GodMode Veículo', 'pneu_blindado': 'Pneu Blindado',
-            'auto_unlock': 'Destrancar Automático', 'drop_rapido': 'Drop Rápido', 'remover_radio': 'Remover Rádio',
-            
-            'reviver': 'Você foi revivido', 'curar': 'Vida restaurada', 'suicidio': 'Suicídio efetuado',
-            'limpar_ferimentos': 'Ferimentos limpos', 'sair_h': 'Solto do H', 'remover_algemas': 'Algemas removidas',
-            'remover_capuz': 'Capuz removido', 'tp_waypoint': 'Teleportado para o Waypoint',
-            'spawn_all_weapons': 'Todas as armas spawnadas', 'remove_all_weapons': 'Armas removidas',
-            'puxar_municao': 'Munição recebida', 'force_tab_on': 'Tab Forçado ativado', 'force_tab_off': 'Tab Forçado desativado',
-            'mudar_skin': 'Skin da arma alterada',
-            
-            'destrancar_veiculos': 'Veículos Próximos Destrancados', 'trancar_veiculos': 'Veículos Próximos Trancados',
-            'tp_veiculo_prox': 'Veículo Puxado',
-            
-            'reparar_veiculo': 'Veículo reparado', 'desvirar_carro': 'Veículo desvirado',
-            'tunar_full': 'Veículo tunado no máximo', 'tunagem_aleatoria': 'Tunagem aleatória aplicada',
-            'deletar_veiculo': 'Veículo Deletado',
-            
-            'puxar_veiculo': 'Veículo puxado', 
-            'deletar_veiculo_selecionado': 'Veículo deletado', 'puxar_todos_veiculos': 'Todos os veículos puxados',
-            'matar_passageiros': 'Passageiros mortos', 'jogar_veiculo_oceano': 'Veículo no oceano!',
-            'jogar_veiculo_espaco': 'Veículo no espaço!', 'deixar_passageiros_ceu': 'Passageiros no céu!',
-            
-            'espectar_veiculo': 'Espectador Veículo', 'erro_alvo': 'Selecione um carro na lista!',
-            'espectar_jogador': 'Espectador Jogador', 'molestar_jogador': 'Jogador Molestado', 'erro_alvo_player': 'Selecione um jogador na lista!'
-        };
-
-        function showNotification(actionId, isToggle, estado) {
-            const container = document.getElementById('notification-container');
-            if(!container) return;
-            
-            const div = document.createElement('div');
-            div.className = 'notification';
-            
-            let name = nameMap[actionId] || actionId.replace('WEAPON_', '').toUpperCase();
-            let text = isToggle ? `${name} ${estado ? 'Ativado' : 'Desativado'}` : `${name}`;
-            if(!['erro_alvo', 'erro_alvo_player'].includes(actionId) && !isToggle && nameMap[actionId]) {
-                text = name; 
-            }
-            
-            div.innerHTML = `<img src="./escudo.png" alt="icon"> <span>${text}</span>`;
-            
-            container.appendChild(div);
-            setTimeout(() => { div.remove(); }, 3000);
-        }
-
-        const menuContainer = document.getElementById('menu-container');
-        const dragHandle = document.getElementById('drag-handle');
-        let isDragging = false;
-        let dragOffsetX = 0;
-        let dragOffsetY = 0;
-
-        dragHandle.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            dragOffsetX = e.clientX - menuContainer.getBoundingClientRect().left;
-            dragOffsetY = e.clientY - menuContainer.getBoundingClientRect().top;
-            menuContainer.style.position = 'absolute';
-            menuContainer.style.margin = '0';
-            dragHandle.style.cursor = 'grabbing';
-        });
-
-        document.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            let newX = e.clientX - dragOffsetX;
-            let newY = e.clientY - dragOffsetY;
-            menuContainer.style.left = `${newX}px`;
-            menuContainer.style.top = `${newY}px`;
-        });
-
-        document.addEventListener('mouseup', () => {
-            if(isDragging) {
-                isDragging = false;
-                dragHandle.style.cursor = 'grab';
-            }
-        });
-
-        function mudarAbaLateral(viewId, elemento) {
-            document.querySelectorAll('.sidebar .nav-btn').forEach(btn => {
-                btn.classList.remove('active');
-                let bar = btn.querySelector('.red-bar');
-                if(bar && btn !== elemento) bar.remove();
-            });
-
-            elemento.classList.add('active');
-            if(!elemento.querySelector('.red-bar')) {
-                elemento.insertAdjacentHTML('afterbegin', '<div class="red-bar"></div>');
-            }
-
-            document.querySelectorAll('.view-container').forEach(view => view.style.display = 'none');
-            document.getElementById(viewId).style.display = 'flex';
-            
-            if(viewId === 'view-armas') {
-                const navArmas = document.getElementById('view-armas').querySelector('.top-nav');
-                const defaultTab = navArmas.querySelector('[data-target="content-armas"]');
-                if(defaultTab) defaultTab.click();
-            }
-            if(viewId === 'view-veiculos') {
-                const navVeiculos = document.getElementById('view-veiculos').querySelector('.top-nav');
-                const defaultTab = navVeiculos.querySelector('[data-target="tela-veiculos-carros"]');
-                if(defaultTab) defaultTab.click();
-            }
-            if(viewId === 'view-online') {
-                const navOnline = document.getElementById('view-online').querySelector('.top-nav');
-                const defaultTab = navOnline.querySelector('[data-target="tela-online-jogadores"]');
-                if(defaultTab) defaultTab.click();
-            }
-        }
-
-        const topNavs = document.querySelectorAll('.top-nav');
-        topNavs.forEach(nav => {
-            const tabs = nav.querySelectorAll('.top-nav-item');
-            const parentView = nav.closest('.view-container');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-
-                    if (parentView) {
-                        const targetId = tab.getAttribute('data-target');
-                        parentView.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
-                        
-                        const target = document.getElementById(targetId);
-                        if (target) target.style.display = 'flex';
-                    }
-                });
-            });
-        });
-
-        let elementoAguardandoBind = null;
-        document.querySelectorAll('.bindable').forEach(el => {
-            el.addEventListener('contextmenu', (e) => {
-                e.preventDefault();
-                if (elementoAguardandoBind) elementoAguardandoBind.querySelector('.bind-text').innerText = '';
-                elementoAguardandoBind = el;
-                el.querySelector('.bind-text').innerText = '[...]';
-            });
-        });
-
-        document.addEventListener('keyup', function(event) {
-            if (elementoAguardandoBind) {
-                let textEl = elementoAguardandoBind.querySelector('.bind-text');
-                if (event.key === "Escape") {
-                    textEl.innerText = '';
-                } else {
-                    let keyName = event.key.toUpperCase();
-                    textEl.innerText = '[' + keyName + ']';
-                    let bindId = elementoAguardandoBind.getAttribute('data-bind');
-                    fetch(`https://${GetParentResourceName()}/setBind`, {
-                        method: 'POST', body: JSON.stringify({ action: bindId, key: keyName })
-                    });
-                }
-                elementoAguardandoBind = null;
-                return;
-            }
-            if (event.key === "Insert" || event.key === "Escape") {
-                if (Date.now() - tempoAbertura > 300) {
-                    fetch(`https://${GetParentResourceName()}/fecharMenu`, { method: 'POST' });
-                }
-            }
-        });
-
-        window.addEventListener('message', function(event) {
-            let item = event.data;
-            if (item.action === "toggleMenu") {
-                document.body.style.display = item.show ? "flex" : "none";
-                if (item.show) tempoAbertura = Date.now();
-            }
-            if (item.action === "executeBind") {
-                let el = document.querySelector(`[data-bind="${item.bindId}"]`);
-                if (el) {
-                    let checkbox = el.querySelector('input[type="checkbox"]');
-                    if (checkbox) checkbox.click(); else el.click();
-                }
-            }
-            if (item.action === "updateVehicleList") {
-                onlineVehicles = item.vehicles;
-                renderOnlineVehicles();
-            }
-            if (item.action === "updatePlayerList") {
-                onlinePlayers = item.players;
-                renderOnlinePlayers();
-            }
-        });
-
-        function renderOnlineVehicles() {
-            const listDiv = document.getElementById('online-vehicle-list');
-            if(!listDiv) return;
-            
-            const searchVal = document.getElementById('search-online-car').value.toLowerCase();
-            listDiv.innerHTML = '';
-            
-            let filtered = onlineVehicles.filter(v => v.name.toLowerCase().includes(searchVal));
-            
-            if(filtered.length === 0) {
-                listDiv.innerHTML = '<div style="color: #555; text-align: center; padding: 20px 0; font-size: 12px;">Nenhum veículo encontrado</div>';
-                return;
-            }
-            
-            filtered.forEach(v => {
-                let div = document.createElement('div');
-                div.className = 'list-item' + (selectedOnlineVehicle === v.id ? ' active' : '');
-                
-                div.onclick = () => {
-                    if (selectedOnlineVehicle === v.id) {
-                        selectedOnlineVehicle = null; 
-                    } else {
-                        selectedOnlineVehicle = v.id;
-                    }
-                    renderOnlineVehicles();
-                };
-                
-                let distRound = Math.round(v.dist);
-                let occTag = v.occupied ? '<span style="color: #e60000; font-size: 11px; font-weight: bold;">[OCUPADO]</span>' : '';
-                div.innerHTML = `<span>${v.name.toLowerCase()} - ${distRound}m</span> ${occTag}`;
-                
-                listDiv.appendChild(div);
+        // Lógica de comunicação com o GTA (NUI)
+        function sendClick(acao) {
+            fetch(`https://${GetParentResourceName()}/acaoBotao`, { 
+                method: 'POST', 
+                body: JSON.stringify({ acao: acao }) 
             });
         }
-        
-        function renderOnlinePlayers() {
-            const listDiv = document.getElementById('online-player-list');
-            if(!listDiv) return;
-            
-            const searchVal = document.getElementById('search-player').value.toLowerCase();
-            listDiv.innerHTML = '';
-            
-            let filtered = onlinePlayers.filter(p => p.name.toLowerCase().includes(searchVal) || (p.isLocal && 'você'.includes(searchVal)));
-            
-            if(filtered.length === 0) {
-                listDiv.innerHTML = '<div style="color: #555; text-align: center; padding: 20px 0; font-size: 12px;">Nenhum jogador encontrado</div>';
-                return;
-            }
-            
-            filtered.forEach(p => {
-                let div = document.createElement('div');
-                div.className = 'list-item' + (selectedOnlinePlayer === p.id ? ' active' : '');
-                
-                div.onclick = () => {
-                    if (selectedOnlinePlayer === p.id) {
-                        selectedOnlinePlayer = null;
-                    } else {
-                        selectedOnlinePlayer = p.id;
-                    }
-                    renderOnlinePlayers();
-                };
-                
-                let distRound = Math.round(p.dist);
-                let deadTag = p.isDead ? '<span style="color: #e60000; font-size: 11px; font-weight: bold;">[MORTO]</span>' : '';
-                let displayName = p.isLocal ? 'Você' : p.name;
-                
-                div.innerHTML = `<span>${p.id} - ${displayName} - ${distRound}m</span> ${deadTag}`;
-                
-                listDiv.appendChild(div);
+
+        function sendToggle(toggleName, estado) {
+            fetch(`https://${GetParentResourceName()}/acaoToggle`, { 
+                method: 'POST', 
+                body: JSON.stringify({ toggle: toggleName, estado: estado }) 
+            });
+        }
+
+        function sendSlider(sliderName, valor) {
+            fetch(`https://${GetParentResourceName()}/acaoSlider`, { 
+                method: 'POST', 
+                body: JSON.stringify({ slider: sliderName, valor: valor }) 
             });
         }
 
         function spawnWeapon(weaponName) {
-            fetch(`https://${GetParentResourceName()}/spawnWeapon`, { method: 'POST', body: JSON.stringify({ weapon: weaponName }) });
-            showNotification(weaponName, false);
-        }
-
-        function spawnarVeiculoCustom() {
-            let vehName = document.getElementById('input-spawn-veiculo').value.trim();
-            if(vehName !== "") {
-                fetch(`https://${GetParentResourceName()}/spawnCustomVehicle`, { method: 'POST', body: JSON.stringify({ model: vehName }) });
-                showNotification('Veículo ' + vehName.toUpperCase() + ' Spawnado', false);
-            }
-        }
-
-        function spawnarVeiculoDireto(vehName) {
-            fetch(`https://${GetParentResourceName()}/spawnCustomVehicle`, { method: 'POST', body: JSON.stringify({ model: vehName }) });
-            showNotification('Veículo ' + vehName.toUpperCase() + ' Spawnado', false);
-        }
-
-        function sincronizarCheckboxesSpawn(estado) {
-            if(document.getElementById('chk-spawn_in_veh_left')) document.getElementById('chk-spawn_in_veh_left').checked = estado;
-            if(document.getElementById('chk-spawn_in_veh_right')) document.getElementById('chk-spawn_in_veh_right').checked = estado;
-            if(document.getElementById('chk-spawn_in_veh_santagroup')) document.getElementById('chk-spawn_in_veh_santagroup').checked = estado;
-        }
-
-        function pesquisarArma() {
-            let input = document.getElementById('search-weapon').value.toLowerCase();
-            let cards = document.querySelectorAll('.weapon-card');
-            cards.forEach(card => {
-                let name = card.querySelector('span').innerText.toLowerCase();
-                if(name.includes(input)) card.style.display = 'flex'; else card.style.display = 'none';
-            });
-        }
-
-        function selecionarVoo(tipoSelecionado, isChecked) {
-            let voos = ['noclip_normal', 'noclip_invis', 'freecam'];
-            voos.forEach(tipo => {
-                if(tipo !== tipoSelecionado) {
-                    let checkbox = document.getElementById('chk-' + tipo);
-                    if(checkbox) checkbox.checked = false;
-                }
-            });
-            fetch(`https://${GetParentResourceName()}/acaoNoclip`, {
-                method: 'POST', body: JSON.stringify({ tipo: isChecked ? tipoSelecionado : 'off' })
-            });
-            showNotification(tipoSelecionado, true, isChecked);
-        }
-
-        function sendColor(tipo, corHex) {
-            fetch(`https://${GetParentResourceName()}/acaoCor`, { method: 'POST', body: JSON.stringify({ tipo: tipo, cor: corHex }) });
-        }
-
-        function sendClick(acao) {
-            const requiresVehTarget = ['puxar_veiculo', 'deletar_veiculo_selecionado', 'matar_passageiros', 'jogar_veiculo_oceano', 'jogar_veiculo_espaco', 'deixar_passageiros_ceu'];
-            if (requiresVehTarget.includes(acao) && !selectedOnlineVehicle) {
-                showNotification('erro_alvo', false);
-                return;
-            }
-
-            fetch(`https://${GetParentResourceName()}/acaoBotao`, { 
+            fetch(`https://${GetParentResourceName()}/spawnWeapon`, { 
                 method: 'POST', 
-                body: JSON.stringify({ acao: acao, target: selectedOnlineVehicle }) 
+                body: JSON.stringify({ weapon: weaponName }) 
             });
-            showNotification(acao, false);
-        }
-        
-        function sendToggle(toggleName, estado, el) {
-            if (toggleName === 'espectar_veiculo' && !selectedOnlineVehicle && estado) {
-                showNotification('erro_alvo', false);
-                if (el) el.checked = false;
-                return;
-            }
-            if ((toggleName === 'espectar_jogador' || toggleName === 'molestar_jogador') && !selectedOnlinePlayer && estado) {
-                showNotification('erro_alvo_player', false);
-                if (el) el.checked = false;
-                return;
-            }
-
-            let targetVal = null;
-            if (toggleName === 'espectar_veiculo') targetVal = selectedOnlineVehicle;
-            if (toggleName === 'espectar_jogador' || toggleName === 'molestar_jogador') targetVal = selectedOnlinePlayer;
-
-            fetch(`https://${GetParentResourceName()}/acaoToggle`, { 
-                method: 'POST', 
-                body: JSON.stringify({ toggle: toggleName, estado: estado, target: targetVal }) 
-            });
-            showNotification(toggleName, true, estado);
         }
 
-        function sendSlider(sliderName, valor) { fetch(`https://${GetParentResourceName()}/acaoSlider`, { method: 'POST', body: JSON.stringify({ slider: sliderName, valor: valor }) }); }
-        
+        // Funções de Interface (Troca de Abas)
+        function mudarAbaLateral(viewId, elemento) {
+            document.querySelectorAll('.view-container').forEach(view => view.style.display = 'none');
+            document.getElementById(viewId).style.display = 'flex';
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            elemento.classList.add('active');
+        }
+
+        // Script para atualizar sliders
         function updateSlider(id, value) {
             document.getElementById(id).innerText = value;
-            event.target.style.setProperty('--value', (event.target.value - event.target.min) / (event.target.max - event.target.min) * 100 + '%');
         }
 
-        document.querySelectorAll('.souls-slider').forEach(slider => {
-            slider.style.setProperty('--value', (slider.value - slider.min) / (slider.max - slider.min) * 100 + '%');
+        // Listener para abrir/fechar o menu vindo do LUA
+        window.addEventListener('message', function(event) {
+            let item = event.data;
+            if (item.action === "toggleMenu") {
+                document.body.style.display = item.show ? "flex" : "none";
+            }
         });
     </script>
 </body>
